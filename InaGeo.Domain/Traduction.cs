@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InaGeo.Domain
 {
-    public class Translation
+    public class Traduction
     {
         public Guid idTransaltion { get; set; }
         public DateTime date { get; set; }
