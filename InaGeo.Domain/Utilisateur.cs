@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace InaGeo.Domain
 {
-    class Utilisateur
+    public class Utilisateur
     {
         public Guid IdUtilisateurs { get; set; }
         public string Nom { get; set; }
-        public string prenom { get; set; }
-        public string email { get; set; }
-        public string adresse { get; set; }
-        public string motPasse { get; set; }
+        public string Prenom { get; set; }
+        public string Email { get; set; }
+        public string Adresse { get; set; }
+        public string NumeroTel { get; set; }
+        public string MotPasse { get; set; }
     }
 }

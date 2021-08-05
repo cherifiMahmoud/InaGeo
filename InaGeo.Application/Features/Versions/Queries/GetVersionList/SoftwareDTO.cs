@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace InaGeo.Domain
+namespace InaGeo.Application.Features.Versions.Queries.GetVersionList
 {
-    public class Software
+    public class SoftwareDTO
     {
         public Guid idSoftware { get; set; }
         public string Name { get; set; }

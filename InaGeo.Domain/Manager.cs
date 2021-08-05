@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InaGeo.Domain
 {
-    class manager : Utilisateur
+    public class Manager : Utilisateur
     {
 
     }

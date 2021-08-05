@@ -8,7 +8,8 @@ namespace InaGeo.Domain
 {
     public class Traduction
     {
-        public Guid idTransaltion { get; set; }
-        public DateTime date { get; set; }
+        public Guid IdTransaltion { get; set; }
+        public DateTime Date { get; set; }
+       
     }
 }

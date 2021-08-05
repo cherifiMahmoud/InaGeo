@@ -10,5 +10,6 @@ namespace InaGeo.Domain
     {
         public Guid idModule { get; set; }
         public string name { get; set; }
+        public List<Version> Versions  { get; set; }
     }
 }
