@@ -4,9 +4,10 @@ namespace InaGeo.Domain
 {
     public class Version
     {
-        public Guid IdVersion { get; set; }
+        public long VersionId { get; set; }
+        public Guid Guid { get; set; }
         public string Name { get; set; }
         public Software Software { get; set; }
-        public Guid idSoftware { get; set; }
+        public long SoftwareId { get; set; }
     }
 }

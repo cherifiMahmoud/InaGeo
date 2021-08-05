@@ -34,7 +34,7 @@ namespace InaGeo.Application.Features.Versions.Commands.CreateVersion
 
             version = await _versionRepository.AddAsync(version);
 
-            return version.IdVersion;
+            return version.Guid;
 
         }
     }
