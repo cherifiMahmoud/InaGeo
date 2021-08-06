@@ -9,7 +9,7 @@ using Version = InaGeo.Domain.Version;
 
 namespace InaGeo.Application.Features.Versions.Commands.CreateVersion
 {
-    public class CreateVersionCommandHandler : IRequestHandler<CreateVersionCommand, Guid>
+    public class CreateVersionCommandHandler : IRequestHandler<CreateVersionCommand, string>
     {
         private readonly IVersionRespository _versionRepository;
         private readonly IMapper _mapper;
@@ -20,9 +20,11 @@ namespace InaGeo.Application.Features.Versions.Commands.CreateVersion
             _mapper = mapper;
         }
 
-        public async Task<Guid> Handle(CreateVersionCommand request, CancellationToken cancellationToken)
+        public async Task<string> Handle(CreateVersionCommand request, CancellationToken cancellationToken)
         {
-            Version version = _mapper.Map<Version>(request);
+            var version = _mapper.Map<Version>(request);
+            
+            version.Guid = Guid.NewGuid();
 
             CreateCommandValidator validator = new CreateCommandValidator();
             var result = await validator.ValidateAsync(request);
@@ -34,7 +36,7 @@ namespace InaGeo.Application.Features.Versions.Commands.CreateVersion
 
             version = await _versionRepository.AddAsync(version);
 
-            return version.Guid;
+            return version.Name;
 
         }
     }

@@ -28,9 +28,9 @@ namespace InaGeo.Api.Controllers
         }
 
         [HttpPost(Name = "AddVersion")]
-        public async Task<ActionResult<Guid>> Create([FromBody] CreateVersionCommand createVersionCommand)
+        public async Task<ActionResult<string>> Create([FromBody] CreateVersionCommand createVersionCommand)
         {
-            Guid id = await _mediator.Send(createVersionCommand);
+            var id = await _mediator.Send(createVersionCommand);
             return Ok(id);
         }
 

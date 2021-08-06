@@ -5,8 +5,8 @@ namespace InaGeo.Application.Features.Versions.Commands.UpdateVersion
 {
     public class UpdateVersionCommand : IRequest
     {
-        public Guid IdVersion { get; set; }
+        public long VersionId { get; set; }
         public string Name { get; set; }
-        public Guid idSoftware { get; set; }
+        public long SoftwareId { get; set; }
     }
 }

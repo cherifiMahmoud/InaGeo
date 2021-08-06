@@ -21,7 +21,7 @@ namespace InaGeo.Application.Features.Versions.Commands.UpdateVersion
         public async Task<Unit> Handle(UpdateVersionCommand request, CancellationToken cancellationToken)
         {
             Version version = _mapper.Map<Version>(request);
-
+            
             await _versionRepository.UpdateAsync(version);
 
             return Unit.Value;
