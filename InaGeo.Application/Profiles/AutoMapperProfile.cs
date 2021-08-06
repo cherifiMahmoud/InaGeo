@@ -3,6 +3,7 @@ using InaGeo.Application.Features.Versions.Commands.CreateVersion;
 using InaGeo.Application.Features.Versions.Commands.DeleteVersion;
 using InaGeo.Application.Features.Versions.Commands.UpdateVersion;
 using InaGeo.Application.Features.Versions.Queries.GetVersionList;
+using InaGeo.Domain;
 using Version = InaGeo.Domain.Version;
 
 namespace InaGeo.Application.Profiles
@@ -15,6 +16,8 @@ namespace InaGeo.Application.Profiles
             CreateMap<Version, CreateVersionCommand>().ReverseMap();
             CreateMap<Version, UpdateVersionCommand>().ReverseMap();
             CreateMap<Version, DeleteVersionCommand>().ReverseMap();
+            CreateMap<Software, SoftwareDTO>().ReverseMap();
+
         }
     }
 }
